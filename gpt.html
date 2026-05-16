@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yusra Portfolio</title>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #3b0a0a;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: #5a0f0f;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.btn {
+    background: maroon;
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Skills */
+.skill {
+    margin: 10px auto;
+    width: 60%;
+    background: #fff;
+    color: black;
+}
+
+.skill div {
+    background: maroon;
+    color: white;
+    padding: 5px;
+}
+
+/* Projects */
+.project {
+    background: #5a0f0f;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Contact */
+input, textarea {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background: black;
+    padding: 20px;
+}
+
+/* Bubbles */
+.bubble {
+    position: fixed;
+    bottom: -50px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    animation: rise 10s infinite;
+}
+
+@keyframes rise {
+    from {transform: translateY(0);}
+    to {transform: translateY(-100vh);}
+}
+
+/* WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    padding: 15px;
+    border-radius: 50%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <h2>Yusra</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsB14Wlwotj8-h71VUYZ4zP8qGt908AfkTNQ&s">
+    <h1>Yusra</h1>
+    <p>BSC Student | Web Developer | Graphic Designer</p>
+
+    <a href="#contact" class="btn">Contact Me</a>
+    <a href="#projects" class="btn">View Projects</a>
+</div>
+
+<!-- About -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate Web Developer & Graphic Designer. I have skills in HTML, CSS, JavaScript, PHP, SQL & Bootstrap.</p>
+</section>
+
+<!-- Skills -->
+<section>
+    <h2>My Skills</h2>
+
+    <div class="skill"><div style="width:80%">HTML 80%</div></div>
+    <div class="skill"><div style="width:40%">CSS 60%</div></div>
+    <div class="skill"><div style="width:30%">JavaScript 40%</div></div>
+    
+</section>
+
+<!-- Stats -->
+<section>
+    <h2>My Achievements</h2>
+    <p>10 Projects | 15 Technologies | 100% Dedication</p>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>E-Commerce Website</h3>
+        <a href="#" class="btn">Live Demo</a>
+    </div>
+
+    <div class="project">
+        <h3>YouTube UI Clone</h3>
+        <a href="#" class="btn">Live Demo</a>
+    </div>
+
+</section>
+
+<!-- Feedback -->
+<section>
+    <h2>Client Feedback</h2>
+    <p>"Amazing work and professional design!"</p>
+    <p>"Highly recommended developer!"</p>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <p><i class="fa fa-map-marker"></i> Hyderabad</p>
+    <p><i class="fa fa-phone"></i> 03197994331</p>
+    <p><i class="fa fa-envelope"></i> ghoriahmed903@gmail.com</p>
+
+    <form>
+        <input type="text" placeholder="Your Name"><br>
+        <input type="email" placeholder="Your Email"><br>
+        <input type="text" placeholder="Subject"><br>
+        <input type="text" placeholder="Address"><br>
+        <input type="text" placeholder="Contact"><br>
+        <textarea placeholder="Message"></textarea><br>
+        <button class="btn">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Yusra</p>
+
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-twitter"></i>
+</footer>
+
+<!-- WhatsApp -->
+<a href="#" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Bubbles JS -->
+<script>
+for(let i=0;i<20;i++){
+    let bubble=document.createElement("div");
+    bubble.className="bubble";
+    bubble.style.width=bubble.style.height=Math.random()*40+"px";
+    bubble.style.left=Math.random()*100+"%";
+    document.body.appendChild(bubble);
+}
+</script>
+
+</body>
+</html>
